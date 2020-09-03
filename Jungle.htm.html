@@ -1,0 +1,171 @@
+<!--Generated from HTML Code Play-->
+<!--Generated from HTML Code Play-->
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>email validation </title>
+  <style type="text/css" media="all">
+    Body{
+      background: #393939;
+      display: flex;
+      min-height: 100vh ;
+      justify-content: center ;
+      align-items: center ;
+    }
+    H3{
+      color: #fff;
+      font-family: Times New Roman;
+Margin-bottom:6px;
+Position:relative ;
+Letter-spacing:1px;
+Font-weight:500px;
+    }
+#form .input{
+Position:relative;
+} 
+    #mail{
+      border: none ;
+      outline: none;
+     border-radius: 7px;
+     background: #272727;
+Padding :11px;
+Color:#ff5858;
+Width:300px;
+Font-style:18px;
+    }
+      #mai{
+      border: none ;
+      outline: none;
+      border-radius: 7px;
+      background: #272727;
+      Padding :11px;
+      Color:#ff5858;
+      Width:300px;
+      Font-style:18px;
+      margin-top: 20px;
+      }
+    
+#form.invalid .input:before {
+Content: ' ';
+Position: absolute;
+Right:12px;
+Top:13px;
+Width:24px;
+Height:24px;
+Background:url( /storage/emulated/0/Download/invalid.png);
+Background-size: cover;
+
+}
+#form.valid .input:before {
+Content: ' ';
+Position: absolute;
+Right:12px;
+Top:13px;
+Width:24px;
+Height:24px;
+Background:url( /storage/emulated/0/Download/valid.png);
+Background-size: cover;
+
+}
+#text{
+Font-style: italic;
+Font-weight:300;
+
+}
+#yum{
+  background: blue;
+  outline: none;
+  width: 70px;
+  height: 40px;
+  color: #fff;
+  font-family: serif;
+  font-size: 13px;
+  border: none;
+ margin-top:20px;
+ border-radius:10px;
+ transition:.2s linear
+}
+#yum:hover{
+ 
+  background: green
+}
+
+  </style>
+</head>
+<body>
+
+  <div>
+    <form id="form" action="Dhdh.htm" method="get" accept-charset="utf-8" onsubmit="return valid">
+      <h3>enter your email</h3>
+      <div class="input">
+      <input type="text " name="" id="mail" value="" placeholder="eg_rome@gmail.com" onkeydown="return validation()" required title="jdhdhd"/>
+      <span id="text"></span>
+      </div>
+       <div class="inpu">
+         <input type="password" name="" id="mai" value="" placeholder="enter password" onkeydown="valida()" required title="password should be at least 7 characters"/>
+         <span id="tet"></span>
+       </div>
+       <input type="submit" name="" id="yum" value="submit" />
+    </form>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    function validation() {
+var form= document.getElementById("form"); 
+var email= document.getElementById("mail").value; var text=document.getElementById("text");
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if(email.match(pattern)){
+  form.classList.add("valid");
+  form.classList.remove("invalid");
+  text.innerHTML="correctly typed";
+text.style.color="green"
+
+}
+else{
+form.classList.remove("valid");
+form.classList.add("invalid");
+text.innerHTML="inorrectly typed";
+text.style.color="red"
+
+}
+if(email == ""){
+  form.classList.remove("valid");
+  form.classList.remove("invalid");
+  text.innerHTML="";
+text.style.color="green"
+}
+} 
+function valida(){
+  var pass= document.getElementById("mai"). value;
+  var text= document.getElementById("tet");
+  if(pass.length<6){
+    text.innerHTML=" password TOO SHORT";
+    text.style.color="red"
+  }
+  else {
+    text.innerHTML=""
+  }
+}
+function valid(){
+  var form= document.getElementById("form"); 
+var email= document.getElementById("mail").value; var text=document.getElementById("text");
+var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+if(email.match(pattern)){
+  form.classList.add("valid");
+  form.classList.remove("invalid");
+  text.innerHTML="correctly typed";
+text.style.color="green"
+return false;
+}
+else{
+form.classList.remove("valid");
+form.classList.add("invalid");
+text.innerHTML="inorrectly typed";
+text.style.color="red"
+true
+}
+}
+  </script>
+</body>
+</html>
